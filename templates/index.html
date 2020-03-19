@@ -1,5 +1,7 @@
 {% load static %}
 
+{% static "images" as image %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +27,7 @@
 
     <div class="container">
       <div class="card">
-        <img class="card-img-top" src="/static/images/{{movie.img}}" alt="Card image" height="200px">
+        <img class="card-img-top" src="{{movie.img.url}}" alt="Card image" height="200px">
         <div class="card-body">
           <h4 class="card-title"> {{ movie.title }} </h4>
           <p class="card-text">{{ movie.cast }}</p>
